@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="container">
+    
+        <h1>TODO</h1>
+       <input type="text"  id="input">
+       <button id="add">ADD</button>
+       <ol id="todolist">
+
+       </ol>
+
+    </div>
+
+
+    <script>
+var intput =document.getElementById("input")
+var btn =document.getElementById("add")
+var todolist=document.getElementById("todolist")
+
+var todos =[]
+
+btn.addEventListener("click",()=>{
+    todos.push(input.value)
+    // console.log(todos)
+    addtodo(input.value)
+    input.value=" "
+    
+})
+
+function addtodo(todo){
+    var para = document.createElement("li")
+    para.innerText=todo
+    todolist.appendChild(para)
+    para.addEventListener("click",()=>{
+        para.style.textDecoration="line-through"
+
+    })
+    
+
+}
+
+
+
+    </script>
+    
+</body>
+
+</html>
